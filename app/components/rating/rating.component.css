@@ -1,0 +1,19 @@
+
+.movie-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.movie-image {
+  width: 100px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+/* .movie-details {
+    display: flex;
+    flex-direction: column;
+  } */
+mat-grid-tile {
+  background: lightblue;
+}

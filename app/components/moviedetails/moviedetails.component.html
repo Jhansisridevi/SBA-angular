@@ -1,0 +1,45 @@
+<!--<div class="movie-details">
+<div *ngIf="selectedMovie" [ngClass]="{'high-rating': selectedMovie.rating >= 4.5}">
+    <div><img [src]="selectedMovie.coverImage" alt="{{ selectedMovie.title }} Cover" class="movie-cover"></div>
+    <h2>{{ selectedMovie.title }}</h2>
+    
+    <p>{{ selectedMovie.description }}</p>
+    <p>Release Year: {{ selectedMovie.releaseYear }}</p>
+    <p [ngStyle]="{'color': selectedMovie.rating >= 4.5 ? 'green' : 'black'}"></p> 
+    
+    <p>Rating: {{ selectedMovie.rating }}</p>
+  </div>
+</div> -->
+<mat-card
+  class="example-card"
+  *ngIf="selectedMovie; else selectMovieMessage"
+  [ngClass]="{ 'high-rating': selectedMovie.rating >= 4.0 }"
+>
+  <mat-card-header>
+    <mat-card-title class="heading">{{ selectedMovie.title }}</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    class="movie-cover"
+    [src]="selectedMovie.coverImage"
+    alt="{{ selectedMovie.title }}"
+  />
+  <mat-card-content>
+    <p>
+      {{ selectedMovie.description }}
+    </p>
+    <p>Release Year: {{ selectedMovie.releaseYear }}</p>
+    <p
+      [ngStyle]="{ color: selectedMovie.rating >= 4.5 ? 'green' : 'black' }"
+    ></p>
+    <p>Rating: {{ selectedMovie.rating }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button class="button">REVIEW</button>
+    <button mat-button class="button">SHARE</button>
+  </mat-card-actions>
+</mat-card>
+<ng-template #selectMovieMessage>
+  <p class="movie-message">Click on the movie list to view movie details.</p>
+</ng-template>

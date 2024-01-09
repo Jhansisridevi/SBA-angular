@@ -1,0 +1,16 @@
+.selected-movie {
+  font-weight: bold;
+  color: #31708f;
+  cursor: pointer;
+}
+.example-card {
+  font-family: Roboto;
+  max-width: 400px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.movie-list {
+  width: 400px;
+  padding: 20px;
+  background: linear-gradient(to right, #392467, #a367b1);
+}

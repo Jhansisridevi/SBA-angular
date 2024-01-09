@@ -1,0 +1,40 @@
+<!-- <p>rating works!</p>
+<span *ngFor="let _ of starsArray; let i = index">
+    <i class="fas fa-star" [ngClass]="{'star-filled': i + 1 <= rating}"></i>
+  </span>
+<div *ngFor="let movie of popularMovies" class="movie-item">
+    <img [src]="movie.imageUrl" alt="{{ movie.title }}" class="movie-image">
+    <div class="movie-details">
+      <h3>{{ movie.title }}</h3>
+      <p>Rating: {{ movie.rating }}</p>
+      
+    </div>
+  </div>
+   -->
+<!-- <div *ngFor="let movie of popularMovies" class="movie-item" [@fadeInOut]>
+    <img [src]="movie.imageUrl" alt="{{ movie.title }}" class="movie-image">
+    <div class="movie-details">
+      <h3>{{ movie.title }}</h3>
+      <p>Rating: {{ movie.rating }}</p>
+    </div>
+  </div> -->
+<mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-tile
+    ><img class="movie-cover" src="./assets/img4.png"
+  /></mat-grid-tile>
+  <mat-grid-tile
+    ><img class="movie-cover" src="./assets/img2.png"
+  /></mat-grid-tile>
+  <mat-grid-tile
+    ><img class="movie-cover" src="./assets/img5.png"
+  /></mat-grid-tile>
+  <mat-grid-tile
+    ><img class="movie-cover" src="./assets/img1.png"
+  /></mat-grid-tile>
+  <mat-grid-tile
+    ><img class="movie-cover" src="./assets/img6.png"
+  /></mat-grid-tile>
+  <mat-grid-tile
+    ><img class="movie-cover" src="./assets/img3.png"
+  /></mat-grid-tile>
+</mat-grid-list>
