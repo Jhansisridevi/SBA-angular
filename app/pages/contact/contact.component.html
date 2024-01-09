@@ -1,0 +1,13 @@
+<div class="display-container">
+  <mat-grid-list cols="2">
+    <mat-grid-tile>
+      <app-movielist (movieSelected)="onMovieSelected($event)"></app-movielist>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-moviedetails
+        class="right-container"
+        [selectedMovie]="selectedMovie"
+      ></app-moviedetails>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
